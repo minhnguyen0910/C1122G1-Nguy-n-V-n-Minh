@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><input type="number" value="Nhập số thứ nhất" id="n1"></td>
+        <td><input type="number" value="Nhập số thứ 2" id="n2"></td>
+        <td>
+            <button onclick="ketQuaCong()">Cộng</button>
+        </td>
+        <td>
+            <button onclick="ketQuaTru()">Trừ</button>
+        </td>
+    </tr>
+</table>
+<p>Result</p>
+<p id="1"></p>
+<script>
+    function ketQuaCong() {
+        let n1 = +document.getElementById("n1").value;
+        let n2 = +document.getElementById("n2").value;
+        let result = n1 + n2;
+        document.getElementById("1").innerHTML = "Kết quả cộng là: " + result;
+    }
+
+    function ketQuaTru() {
+        let n1 = +document.getElementById("n1").value;
+        let n2 = +document.getElementById("n2").value;
+        let result = n1 - n2;
+        document.getElementById("1").innerHTML = "Kết quả trừ là: " + result;
+    }
+</script>
+</body>
+</html>

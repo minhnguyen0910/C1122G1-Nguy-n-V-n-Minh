@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let doanhSo= prompt("Nhập số lương");
+    let luong;
+    if (doanhSo>=100000000) {
+        luong=doanhSo*25/100
+        document.write(luong)
+    }else if (doanhSo>=50000000) {
+        luong=doanhSo*15/100
+        document.write(luong)
+    }else {
+        luong=doanhSo*10/100
+        document.write(luong)
+    }
+</script>
+</body>
+</html>

@@ -10,7 +10,7 @@
 <h3 id="hienthisongay"></h3> <br>
 <script>
     function bam() {
-        let nhapSo = +document.getElementById("hienthi").value
+        let nhapSo = +document.getElementById("hienthi").value;
         if (nhapSo >= 1 && nhapSo <= 12) {
             switch (nhapSo) {
                 case 1:
@@ -20,19 +20,19 @@
                 case 8:
                 case 10:
                 case 12:
-                    document.getElementById("hienthisongay").innerHTML = "Tháng có 31 Ngày"
+                    document.getElementById("hienthisongay").innerHTML = "Tháng có 31 Ngày";
 
                     break;
                 case 2:
-                    document.getElementById("hienthisongay").innerHTML = "Tháng có 28 hoặc 29 ngày"
+                    document.getElementById("hienthisongay").innerHTML = "Tháng có 28 hoặc 29 ngày";
 
                 default:
-                    document.getElementById("hienthisongay").innerHTML = "Tháng có 30 ngày"
+                    document.getElementById("hienthisongay").innerHTML = "Tháng có 30 ngày";
 
 
             }
         } else {
-            document.getElementById("hienthisongay").innerHTML = "Lỗi"
+            document.getElementById("hienthisongay").innerHTML = "Lỗi";
         }
     }
 </script>

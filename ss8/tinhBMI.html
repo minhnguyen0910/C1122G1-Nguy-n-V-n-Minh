@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<b>Nhập Cân Nặng</b>
+<input id="cannang" type="number" value="Nhập W"> <br>
+<b>Nhập Chiều Cao</b>
+<input id="chieucao" type="number" value="Nhập H">
+<button onclick="bam()">Bấm</button>
+<br>
+<p id="hienthi"></p>
+<script>
+    function bam() {
+let canNang= document.getElementById("cannang").value;
+let chieuCao= document.getElementById("chieucao").value;
+let BMI= (canNang/(Math.pow(chieuCao,2) ));
+if (BMI<18) {
+    document.getElementById("hienthi").innerHTML= "BMI = "+BMI + "=>Underweight";
+}else if(BMI<25) {
+    document.getElementById("hienthi").innerHTML= "BMI = "+BMI + "=>Normal";
+}else if(BMI<30) {
+    document.getElementById("hienthi").innerHTML= "BMI = "+BMI + "=>Overweight";
+}else {
+    document.getElementById("hienthi").innerHTML= "BMI = "+BMI + "=>Obese";
+}
+    }
+</script>
+</body>
+</html>

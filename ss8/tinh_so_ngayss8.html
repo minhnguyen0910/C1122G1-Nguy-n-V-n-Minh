@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="hienthi" type="number">
+<button onclick="bam()">TínhSốNGày</button>
+<h3 id="hienthisongay"></h3> <br>
+<script>
+    function bam() {
+        let nhapSo = +document.getElementById("hienthi").value
+        if (nhapSo >= 1 && nhapSo <= 12) {
+            switch (nhapSo) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    document.getElementById("hienthisongay").innerHTML = "Tháng có 31 Ngày"
+
+                    break;
+                case 2:
+                    document.getElementById("hienthisongay").innerHTML = "Tháng có 28 hoặc 29 ngày"
+
+                default:
+                    document.getElementById("hienthisongay").innerHTML = "Tháng có 30 ngày"
+
+
+            }
+        } else {
+            document.getElementById("hienthisongay").innerHTML = "Lỗi"
+        }
+    }
+</script>
+</body>
+</html>

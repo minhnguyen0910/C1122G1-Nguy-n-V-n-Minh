@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From currency</th>
+        <th>To currency</th>
+    </tr>
+    <tr>
+        <td><input type="number" id="nhap"></td>
+        <td><select name="" id="tiendoi">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+        </select></td>
+        <td>
+            <select name="" id="tienduoc">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
+
+            </select>
+        </td>
+        <td>
+            <button onclick="tienDoiDuoc()">bamvao</button>
+        </td>
+    </tr>
+</table>
+<h3>Result</h3>
+<p id="ketqua"></p>
+
+<script>
+    function tienDoiDuoc() {
+        let sotien = document.getElementById("nhap").value;
+        let tiendoi = document.getElementById("tiendoi").value;
+        let tienduoc = document.getElementById("tienduoc").value;
+        if (tiendoi == "VND" && tienduoc == "USD") {
+            sotien = sotien / 24000;
+        } else if (tiendoi == "USD" && tienduoc == "VND") {
+            sotien = sotien * 24000;
+        } else if (tiendoi == "USD" && tienduoc == "USD") {
+            sotien = sotien;
+        } else {
+            sotien = sotien;
+        }
+        document.getElementById("ketqua").innerHTML = sotien
+    }
+</script>
+</body>
+</html>

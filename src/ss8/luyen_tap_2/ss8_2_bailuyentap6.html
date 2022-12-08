@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let a= +prompt("nhập a");
+let b= +prompt("Nhập b");
+let c= +prompt("Nhập c");
+let delta= Math.pow(b,2)-4*a*c;
+let x1;
+let x2;
+if (a==0){
+    alert("không nhận giá trị a=0");
+}else {
+    if (delta < 0) {
+        alert("vô nghiệm");
+    } else if (delta == 0) {
+        x1 = -b / (2 * a);
+        x2 = -b / (2 * a);
+        alert("có 1 nghiệm duy nhất =>" +x1);
+    } else {
+        x1 = (-b + Math.pow(delta, 1 / 2)) / (2 * a);
+        x2 = (-b - Math.pow(delta, 1 / 2)) / (2 * a);
+        alert("nghiệm 1 =>"+x1);
+        alert("nghiệm 2 =>"+ x2);
+    }
+}
+</script>
+</body>
+</html>

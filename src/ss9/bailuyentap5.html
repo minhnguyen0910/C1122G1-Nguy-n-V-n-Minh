@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let so;
+    let tong;
+    for (let num=1;num<=20;num++){
+        so= (1/Math.sqrt(5,2))*(Math.pow(((1+Math.sqrt(5,2))/2),num)-Math.pow(((1-Math.sqrt(5,2))/2),num));
+        document.write(so +"<br>");
+        if (num==20){
+            tong=(1/Math.sqrt(5,2))*(Math.pow(((1+Math.sqrt(5,2))/2),(num+2))-Math.pow(((1-Math.sqrt(5,2))/2),(num+2)));
+            document.write("tổng là"+tong);
+        }
+        }
+</script>
+</body>
+</html>

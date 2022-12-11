@@ -6,10 +6,14 @@
 </head>
 <body>
 <script>
-    let canhA= +prompt("Nhập Cạnh A");
-    let canhB= +prompt("Nhập cạnh B");
-    dienTich= canhA*canhB/2;
-    alert(dienTich);
+    let canhA = +prompt("Nhập Cạnh A");
+    let canhB = +prompt("Nhập cạnh B");
+    if (canhA > 0 && canhB > 0) {
+        let dienTich = canhA * canhB / 2;
+        alert(dienTich);
+    } else {
+    }
+    alert("cạnh phải lơn hơn 0");
 </script>
 </body>
 </html>

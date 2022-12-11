@@ -7,8 +7,12 @@
 <body>
 <script>
     let doDai= +prompt("Nhập độ dài cạnh");
-    dientich= doDai*doDai;
-    alert(dientich);
+    if (doDai>0) {
+        let dienTich = doDai * doDai;
+        alert(dienTich);
+    }else {
+        alert("không phải là cạnh của hình vuông");
+    }
 </script>
 </body>
 </html>

@@ -6,9 +6,21 @@
 </head>
 <body>
 <script>
-    let tienLuong=+prompt("Nhâoj vào số lương");
-    thue=tienLuong*15/100;
-    alert(thue);
+   let luong= +prompt("nhập lương");
+   let thue;
+   if (luong>=0) {
+       if (luong < 12000000) {
+           alert("không cần nộp thuế");
+       } else if (luong < 50000000) {
+           thue = luong * 0.1;
+           alert(thue);
+       } else {
+           thue = luong * 0.15;
+           alert(thue);
+       }
+   }else{
+       alert("không nhận số âm");
+   }
 </script>
 </body>
 </html>

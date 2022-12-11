@@ -7,8 +7,15 @@
 <body>
 <script>
     let soDien= +prompt("Nhập Vào Số Điện");
-    tienDien=soDien*3000;
-    alert(tienDien + "vnd");
+    let tienDien;
+    if (soDien>1000){
+        tienDien=soDien*4000;
+        alert(tienDien + "vnd");
+    }else if (soDien>0){
+        tienDien=soDien*3500;
+        alert(tienDien+"vnd");
+    }
+
 </script>
 </body>
 </html>

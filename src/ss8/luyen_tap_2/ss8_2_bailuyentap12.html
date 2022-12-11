@@ -6,12 +6,15 @@
 </head>
 <body>
 <script>
-    let p= +prompt("số tiền gửi ngân hàng");
-    let r= +prompt("nhập lãi hiện tại");
-    let thang= +prompt("nhập số tháng dự kiến");
-    let n= thang/12;
-    let a=p*(Math.pow((1+r),n));
-    alert(a);
+    let p = +prompt("số tiền gửi ngân hàng");
+    let r = +prompt("nhập lãi hiện tại");
+    let thang = +prompt("nhập số tháng dự kiến");
+    if (p > 0 && r > 0 && thang > 0) {
+        let n = thang / 12;
+        let a = p * (Math.pow((1 + r), n));
+        alert(a);
+    }
+
 </script>
 </body>
 </html>

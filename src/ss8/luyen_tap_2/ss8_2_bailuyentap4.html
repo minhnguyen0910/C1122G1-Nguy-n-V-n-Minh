@@ -8,8 +8,12 @@
 <script>
     let canhA= +prompt("Nhập Cạnh A");
     let canhB= +prompt("NHập Cạnh B");
-    dienTich= canhA*canhB;
-    alert(dienTich);
+    if (canhA>0 && canhB>0) {
+        let dienTich = canhA * canhB;
+        alert(dienTich);
+    }else {
+        alert("cạnh của hình chữ nhật phải lơn hơn 0");
+    }
 </script>
 </body>
 </html>

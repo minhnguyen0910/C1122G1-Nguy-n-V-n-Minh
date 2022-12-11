@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let numb = 0;
+    let soTuNhien = 0;
+    let total = 0;
+    while (numb < 30) {
+        if (soTuNhien % 7 == 0) {
+            total += soTuNhien;
+            numb++;
+        }
+        soTuNhien++;
+    }
+    alert(total);
+</script>
 </body>
 </html>

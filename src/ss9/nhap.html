@@ -6,7 +6,18 @@
 </head>
 <body>
 <script>
-    alert(Math.sqrt(4,2))
-</script>
+    let a = 0;
+    let b = 1;
+    let total = 1;
+    let c = a + b;
+    let result = '0 1 1 ';
+    for (let i = 3; i <= 20; i++) {
+        a = b;
+        b = c;
+        c = a + b;
+        total += b;
+        result += c.toString() + ' ';
+    }
+    document.write("Tổng số fibonacci là :  " + total);
 </body>
 </html>

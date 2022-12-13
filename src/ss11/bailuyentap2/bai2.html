@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [1, 4, 5, "i", "u", 1];
+    let giaTriDau = 0;
+    let giaTriCuoi = mang.length - 1;
+    while (giaTriDau < giaTriCuoi) {
+        let gan = mang[giaTriDau];
+        mang[giaTriDau] = mang[giaTriCuoi];
+        mang[giaTriCuoi] = gan;
+        giaTriDau++;
+        giaTriCuoi--;
+    }
+    document.write(mang);
+</script>
+</body>
+</html>

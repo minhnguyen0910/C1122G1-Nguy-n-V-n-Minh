@@ -6,13 +6,19 @@
 </head>
 <body>
 <script>
-    let mang = ["-", 4, 2, "k", "h", "-", 6];
+    let mang = [];
+    let count = 0;
+    let doDaiMang = prompt("nhập độ dài mảng");
+    for (let i = 0; i < doDaiMang; i++) {
+        mang[i] = prompt("nhập");
+    }
     for (let i = 0; i < mang.length; i++) {
-        if (mang[i] === "-") {
-            mang[i] = "_";
+        if (mang[i] * 0 === 0) {
+            count++;
         }
     }
-    alert(mang);
+    document.write("<br>");
+    document.write("có tất cả" + count + "số trong mảng");
 </script>
 </body>
 </html>

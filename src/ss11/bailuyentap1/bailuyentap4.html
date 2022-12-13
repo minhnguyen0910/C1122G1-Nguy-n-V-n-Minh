@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [];
+    let n = prompt("nhập số giá trị trong mảng");
+    for (let i = 0; i < n; i++) {
+        mang[i] = prompt("nhập giá trị trong mảng");
+    }
+    let first = 0;
+    let last = mang.length - 1;
+    while (first < last) {
+        let b = mang[first];
+        mang[first] = mang[last];
+        mang[last] = b;
+        first++;
+        last--;
+    }
+    document.write(mang);
+
+</script>
+</body>
+</html>

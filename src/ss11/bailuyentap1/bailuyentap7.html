@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numb = [];
+    let n = +prompt("nhập vào số phần tử trong mảng");
+    let j;
+    for (let i = 1; i <= n; i++) {
+        numb[i] = +prompt("nhập vào giá trị nguyên");
+    }
+    let numR = +prompt("nhập số nguyên cần xét");
+    for (let i = 1; i <= numb.length; i++) {
+        if (numR === numb[i]) {
+            numb.splice(i, 1);
+            alert(numb);
+            break;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tiengViet = ["Táo", "Chuối", "Cam"];
+    let tiengAnh = ["Apple", "Banana", "Orange"];
+    let tuCanDich = prompt("nhập từ cần dịch");
+    let viTri = 0;
+    for (let i = 0; i < tiengViet.length; i++) {
+        if (tuCanDich === tiengViet[i]) {
+            viTri = i;
+            for (let j = 0; j < tiengAnh.length; j++) {
+                if (j == viTri) {
+                    alert(tiengAnh[j]);
+                    break;
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

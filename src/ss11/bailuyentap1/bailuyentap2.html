@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = [];
+    for (let i = 0; i < 10; i++) {
+        number[i] = +prompt("nhập số");
+    }
+    let max = number[0];
+    for (let i = 0; i < number.length; i++) {
+        if (number[i] > max) {
+            max = number[i];
+        }
+    }
+    document.write(max);
+</script>
+</body>
+</html>

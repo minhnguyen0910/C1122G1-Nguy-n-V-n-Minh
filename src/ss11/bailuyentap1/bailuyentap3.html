@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = [];
+    let n = prompt("nhập số phần tử trong mảng");
+    for (let i = 0; i < n; i++) {
+        number[i] = +prompt("nhập số");
+    }
+    let max = number[0];
+    let total = 0;
+    for (let i = 0; i < number.length; i++) {
+        total = total + number[i];
+        if (number[i] > max) {
+            max = number[i];
+        }
+    }
+    document.write("số trung bình là" + total / n + "<br>");
+    document.write("số lớn nhất là" + max);
+
+</script>
+</body>
+</html>

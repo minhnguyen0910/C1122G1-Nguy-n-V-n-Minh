@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numb = [];
+    let n = +prompt("nhập vào số phần tử trong mảng");
+    for (let i = 1; i <= n; i++) {
+        numb[i] = +prompt("nhập vào giá trị nguyên");
+    }
+    for (let i = 1; i <= numb.length; i++) {
+        numb.sort(function (a, b) {
+            return a - b;
+        });
+    }
+    alert(numb);
+
+</script>
+</body>
+</html>

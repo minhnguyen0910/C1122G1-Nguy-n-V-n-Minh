@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number=[];
+    let count=0
+    for (let i=0;i<10;i++){
+        number[i] = +prompt("nhập số");
+    }for (let i=0; i<number.length; i++){
+        if (number[i]>10){
+            document.write(number[i]+",");
+            count++;
+        }
+    }document.write("tổng là" +count+"số");
+</script>
+</body>
+</html>

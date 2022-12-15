@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập độ dài của mảng");
+    let mang = [];
+    for (i = 0; i < n; i++) {
+        mang[i] = prompt("nhập giá trị mảng");
+    }
+    alert(daoNguocMang(mang));
+
+    function daoNguocMang(x) {
+        let first = 0;
+        let last = x.length - 1;
+        while (first < last) {
+            let gan = x[first];
+            x[first] = x[last];
+            x[last] = gan;
+            first++;
+            last--;
+        }
+        return x;
+    }
+</script>
+</body>
+</html>

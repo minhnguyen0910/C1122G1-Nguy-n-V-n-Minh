@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = +prompt("nhập số");
+    alert(tinhGiaiThua(num));
+
+    function tinhGiaiThua(number) {
+        let tich = 1;
+        for (let i = 1; i <= number; i++) {
+            tich *= i;
+        }
+        return tich;
+    }
+</script>
+</body>
+</html>

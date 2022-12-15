@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhập giá trị a");
+    let b = +prompt("nhập giá trị b");
+    let c = +prompt("nhập giá trị c");
+
+    alert(kiemTraGiaTriBeNhat(a,b,c));
+
+    function kiemTraGiaTriBeNhat(x, y, z) {
+        let mang = [x, y, z];
+        let min = mang[0];
+        for (let i = 0; i < mang.length; i++) {
+            if (mang[i] < min) {
+                min = mang[i];
+            }
+        }
+        return min;
+    }
+</script>
+</body>
+</html>

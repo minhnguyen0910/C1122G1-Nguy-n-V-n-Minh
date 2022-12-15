@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let mang2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+let temp=prompt("nhập tên ngôi sao");
+alert(findStar(temp));
+
+    function findStar(star) {
+        for (i = 0; i < mang1.length; i++) {
+            if (mang1[i] === star) {
+                return mang2[i];
+            }
+        }return "không tìm thấy ngôi sao"
+    }
+</script>
+</body>
+</html>

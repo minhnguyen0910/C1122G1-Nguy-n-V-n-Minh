@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Curency</th>
+        <th>To Curency</th>
+    </tr>
+    <tr>
+        <td><input id="number" type="number"></td>
+        <td><select name="" id="giaTriDoi">
+            <option value="Met">Mets</option>
+            <option value="Feet">Feets</option>
+        </select></td>
+        <td>
+            <select name="" id="giaTriNhan">
+                <option value="Feet">Feets</option>
+                <option value="Met">Mets</option>
+            </select>
+        </td>
+        <td><input onclick="doiGiaTri()" type="submit"></td>
+
+    </tr>
+</table>
+<p id="in"></p>
+<script>
+    function doiGiaTri() {
+        let a = document.getElementById("number").value;
+        let b = document.getElementById("giaTriDoi").value;
+        let c = document.getElementById("giaTriNhan").value;
+        if (b == "Mets" && c == "Feets") {
+            a = a * 0.305;
+        } else if (b == "Feets" && c == "Mets") {
+            a = a / 0.305;
+        } else {
+            a = a;
+        }
+        document.getElementById("in").innerHTML = a;
+    }
+</script>
+</body>
+</html>

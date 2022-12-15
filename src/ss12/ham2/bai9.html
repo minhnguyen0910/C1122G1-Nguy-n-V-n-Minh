@@ -5,6 +5,28 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let mang = [];
+    let n = +prompt("nhập độ dài của mảng");
+    for (let i = 0; i < n; i++) {
+        mang[i] = prompt("nhập giá trị của mảng");
+    }
+    let kiTu = prompt("nhập kí tự xét");
+    alert(xetGiaTri(mang, kiTu));
 
+    function xetGiaTri(mangXet, kiTuXet) {
+        let count = 0;
+        for (let i = 0; i < mangXet.length; i++) {
+            if (kiTuXet === mangXet[i]) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            return count;
+        } else {
+            return "-1";
+        }
+    }
+</script>
 </body>
 </html>

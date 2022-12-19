@@ -5,27 +5,80 @@
     <title>Title</title>
 </head>
 <body>
-<button onclick="eat()">Eat</button>
-<b id="apple"></b> <br>
-<b id="human"></b>
+<table border="1">
+    <tr>
+        <th>
+            <select name="">
+                <option value="apple1" id="tao1">Apple1</option>
+                <option value="apple2" id="tao2">Apple2</option>
+            </select>
+        </th>
+    </tr>
+    <tr>
+        <td id="reliApple">Weight =</td>
+    </tr>
+</table>
+<br>
+<table border="1">
+    <tr>
+        <th>Adam</th>
+    </tr>
+    <tr>
+        <td>Tên : Adam</td>
+    </tr>
+    <tr>
+        <td>Gender : Man</td>
+    </tr>
+    <tr>
+        <td id="adam">Weight : 60</td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="eatA(adam)">AdamEat</button>
+        </td>
+    </tr>
+</table>
+<br>
+<table border="1">
+    <tr>
+        <th>Eva</th>
+    </tr>
+    <tr>
+        <td>Tên : Eva</td>
+    </tr>
+    <tr>
+        <td>Gender : Male</td>
+    </tr>
+    <tr>
+        <td id="eva">Weight : 50</td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="eatE(eva)">EvaEat</button>
+        </td>
+    </tr>
+</table>
 <script>
     class Apple {
         constructor(weight) {
             this.weight = weight;
         }
 
-        get Weight() {
-            return this.weight
+        getWeight() {
+            return this.weight;
         }
 
         decrease() {
-            this.weight--
+            this.weight--;
+            return this.weight;
         }
 
         isEmpty() {
-            if (this.weight > 0) {
-                alert("còn");
+            let flag = true;
+            if (this.weight === 0) {
+                flag = false;
             }
+            return flag;
         }
     }
 
@@ -37,10 +90,18 @@
         }
 
         checkApple() {
-            if()
-                }
+            let flag = true;
+            if (apple.isEmpty() === true) {
+                flag = false;
+            }
+            return flag;
+        }
 
-        get Weight() {
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight() {
             return this.weight;
         }
 
@@ -49,18 +110,32 @@
         }
 
         eat() {
-            let x = new Apple(10);
-            x--;
-            let y = this.weight;
-            y++;
-            document.getElementById("apple").innerHTML = x
-            document.getElementById("human").innerHTML = y
-
+            this.weight++;
+            return this.weight;
         }
     }
 
-    let human = new Human("Adam", "nam", 60);
-    human.eat()
+    function eatE(x) {
+        if (apple.getWeight() > 0) {
+            document.getElementById("reliApple").innerHTML = "Weight = " + apple.decrease();
+            document.getElementById("eva").innerHTML = "Weight :   " + x.eat();
+        } else {
+            alert("hết cả");
+        }
+    }
+
+    function eatA(x) {
+        if (apple.getWeight() > 0) {
+            document.getElementById("reliApple").innerHTML = "Weight = " + apple.decrease();
+            document.getElementById("adam").innerHTML = "Weight :   " + x.eat();
+        } else {
+            alert("hết cả");
+        }
+    }
+
+    let apple = new Apple(10);
+    let adam = new Human("Adam", "nam", 60);
+    let eva = new Human("Eva", "nữ", 50);
 </script>
 
 </body>

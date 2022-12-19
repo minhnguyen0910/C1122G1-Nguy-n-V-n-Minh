@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(c) {
+            this.c = c;
+        }
+
+        changeToK() {
+            return this.c + 275;
+        }
+
+        changeToF() {
+            return this.c * 9 / 5 + 32;
+        }
+    }
+
+    let doC = +prompt("nhập nhiệt độ");
+    let value = new Temperature(doC);
+    document.write("đô K= " + value.changeToK() + " độ F= " + value.changeToF());
+
+</script>
+</body>
+</html>

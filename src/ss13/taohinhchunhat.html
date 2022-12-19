@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="hienthi"></p>
+<canvas id="DemoCanvas" width="500" height="600"></canvas>
+<script>
+    class Rectangle {
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+
+        perimeter() {
+            return (this.height + this.width) * 2;
+        }
+
+        acreage() {
+            return this.height * this.width;
+        }
+    }
+
+    let height = +prompt("nhập chiều cao");
+    let width = +prompt("nhập chiều rộng");
+    let retangle1 = new Rectangle(height, width);
+    document.getElementById("hienthi").innerHTML = retangle1.perimeter() + " và " + retangle1.acreage();
+    let canvas = document.getElementById("DemoCanvas");
+    let gtx = canvas.getContext('2d');
+    gtx.fillStyle = '#1d1a1d';
+    gtx.fillRect(10, 10, height, width);
+</script>
+</body>
+</html>

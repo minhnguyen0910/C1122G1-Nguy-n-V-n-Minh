@@ -13,10 +13,12 @@
 
         turnOn() {
             this.status = true;
+            alert("bật");
         }
 
         turnOff() {
             this.status = false;
+            alert("tắt");
         }
     }
 
@@ -43,6 +45,7 @@
 
     let lamp = new Lamp(false);
     let swichButton = new Swichbutton(false, lamp);
+    swichButton.swichOn();
 </script>
 </body>
 </html>

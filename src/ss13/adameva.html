@@ -8,14 +8,14 @@
 <table border="1">
     <tr>
         <th>
-            <select name="">
-                <option value="apple1" id="tao1">Apple1</option>
-                <option value="apple2" id="tao2">Apple2</option>
+            <select onchange="change()" name="" id="changeapple">
+                <option value="applee">Apple1</option>
+                <option value="applee1">Apple2</option>
             </select>
         </th>
     </tr>
     <tr>
-        <td id="reliApple">Weight =</td>
+        <td id="reliApple">Weight =10</td>
     </tr>
 </table>
 <br>
@@ -34,7 +34,7 @@
     </tr>
     <tr>
         <td>
-            <button onclick="eatA(adam)">AdamEat</button>
+            <button onclick="eatA()">AdamEat</button>
         </td>
     </tr>
 </table>
@@ -54,7 +54,7 @@
     </tr>
     <tr>
         <td>
-            <button onclick="eatE(eva)">EvaEat</button>
+            <button onclick="eatE()">EvaEat</button>
         </td>
     </tr>
 </table>
@@ -97,46 +97,73 @@
             return flag;
         }
 
-        getWeight() {
-            return this.weight;
-        }
-
-        setWeight() {
-            return this.weight;
-        }
-
-        introduce() {
-            alert("xin chào,tôi tên là " + this.name);
-        }
-
         eat() {
             this.weight++;
             return this.weight;
         }
     }
 
-    function eatE(x) {
-        if (apple.getWeight() > 0) {
-            document.getElementById("reliApple").innerHTML = "Weight = " + apple.decrease();
-            document.getElementById("eva").innerHTML = "Weight :   " + x.eat();
-        } else {
-            alert("hết cả");
+    function change() {
+        let y = document.getElementById("changeapple").value;
+        if (y === "applee") {
+            document.getElementById("reliApple").innerHTML = "Weight = " + apple.getWeight();
+        } else if (y === "applee1") {
+            document.getElementById("reliApple").innerHTML = "Weight = " + apple1.getWeight();
         }
     }
 
-    function eatA(x) {
+    function eatE() {
         if (apple.getWeight() > 0) {
-            document.getElementById("reliApple").innerHTML = "Weight = " + apple.decrease();
-            document.getElementById("adam").innerHTML = "Weight :   " + x.eat();
-        } else {
-            alert("hết cả");
+            let y = document.getElementById("changeapple").value;
+            if (y === "applee") {
+                document.getElementById("reliApple").innerHTML = "Weight = " + apple.decrease();
+                document.getElementById("eva").innerHTML = "Weight :   " + eva.eat();
+
+            } else if (y === "applee1") {
+                document.getElementById("reliApple").innerHTML = "Weight = " + apple1.decrease();
+                document.getElementById("eva").innerHTML = "Weight :   " + eva.eat();
+            }
         }
     }
+
+    function eatA() {
+        if (apple.getWeight() > 0) {
+            let y = document.getElementById("changeapple").value;
+            if (y === "applee") {
+                document.getElementById("reliApple").innerHTML = "Weight = " + apple.decrease();
+                document.getElementById("adam").innerHTML = "Weight :   " + adam.eat();
+
+            } else if (y === "applee1") {
+                document.getElementById("reliApple").innerHTML = "Weight = " + apple1.decrease();
+                document.getElementById("adam").innerHTML = "Weight :   " + adam.eat();
+            }
+        }
+    }
+
 
     let apple = new Apple(10);
+    let apple1 = new Apple(10);
     let adam = new Human("Adam", "nam", 60);
     let eva = new Human("Eva", "nữ", 50);
+
 </script>
 
 </body>
 </html>
+<!--function eatE() {-->
+<!--if (apple.getWeight() > 0) {-->
+<!--document.getElementById("reliApple").innerHTML = "Weight = " + apple.decrease();-->
+<!--document.getElementById("eva").innerHTML = "Weight :   " + eva.eat();-->
+<!--} else {-->
+<!--alert("hết cả");-->
+<!--}-->
+<!--}-->
+
+<!--function eatA() {-->
+<!--if (apple.getWeight() > 0) {-->
+<!--document.getElementById("reliApple").innerHTML = "Weight = " + apple.decrease();-->
+<!--document.getElementById("adam").innerHTML = "Weight :   " + adam.eat();-->
+<!--} else {-->
+<!--alert("hết cả");-->
+<!--}-->
+<!--}-->

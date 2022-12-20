@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let mang = [];
+    let n = +prompt("nhập độ dài của mảng");
+    for (let i = 0; i < n; i++) {
+        mang[i] = +prompt("nhập giá trị của mảng");
+    }
+    for (let i = 0; i < mang.length; i++) {
+        if (mang[i] != -1) {
+            for (let j = i; j < mang.length; j++) {
+                if (mang[j] != -1) {
+                    if (mang[i] > mang[j]) {
+                        let x = mang[i];
+                        mang[i] = mang[j];
+                        mang[j] = x;
+                    }
+                }
+            }
+        }
+    }
+    document.write(mang)
+</script>
 </body>
 </html>

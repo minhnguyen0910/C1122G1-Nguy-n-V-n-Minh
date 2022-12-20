@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let string=prompt("nhập chuỗi");
+    let mang= string.split("");
+    if (mang.length%2===0){
+            if (mang[0]===mang[mang.length-1]&&mang[mang.length/2]===mang[(mang.length/2)-1]){
+           alert("từ đối xứng");
+            }else {
+                alert("không đối xứng");
+            }
+    }else {
+        alert("từ không đối xứng");
+    }
+
+
+</script>
 </body>
 </html>

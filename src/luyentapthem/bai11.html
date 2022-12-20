@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let s=+prompt("nhập số bút cần mua");
+    let x=+prompt("nhập sô bút cần mua để được khuyến mãi");
+    let y=+prompt("nhập số bút được khuyến mãi");
+    let i;
+    for ( i=1; (x+y)*i<=s;i++){
+    }if (i==1){
+        document.write("số bút tối thiểu cần mua là "+x);
+    }
+    if (x*y>(s-(i-1)*y)){
+        document.write("số bút tối thiểu cannf mua là "+x*y);
+    }else {
+        document.write("số bút tối thiểu cần mua là "+(s-(i-1)*y));
+    }
+</script>
 </body>
 </html>

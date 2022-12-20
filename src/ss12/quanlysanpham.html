@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input type="text" id="product">
+<button onclick="addProducts()">Add</button>
+<button id="del" onclick="delet()">Delete</button>
+<button id="edit" onclick="Edit()">Edit</button>
+<table id="box">
+
+</table>
+<script>
+    let listProducts = [];
+
+    function addProducts() {
+        let del=document.getElementById("del").value
+        let ed=document.getElementById("edit").value
+        listProducts.push(del,ed)
+        let tenSP = document.getElementById("product").value;
+        listProducts.push(tenSP);
+
+document.getElementById("box").innerHTML=listProducts
+    }
+
+    function delet() {
+
+    }
+</script>
 </body>
 </html>

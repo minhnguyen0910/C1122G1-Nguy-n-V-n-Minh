@@ -30,9 +30,19 @@
         return min;
     }
 
-    let array = [[2, 3, 4, 5, 7, 1], [10, 11, 2, 7, 8]];
-    document.write("Max : " + findMax(array) + "<br>");
-    document.write("Min : " + findMin(array));
+    let n = +prompt("nhập độ dài của mảng");
+    let mangs = new Array(n);
+    for (let i = 0; i < n; i++) {
+        let l = +prompt("nhập dài của mảng thứ " + i);
+        let array = new Array(l);
+        for (let j = 0; j < l; j++) {
+            array[j] = +prompt("nhập");
+        }
+        mangs[i] = array;
+    }
+    // let array = [[2, 3, 4, 5, 7, 1], [10, 11, 2, 7, 8]];
+    document.write("Max : " + findMax(mangs) + "<br>");
+    document.write("Min : " + findMin(mangs));
 </script>
 </body>
 </html>

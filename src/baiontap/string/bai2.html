@@ -6,15 +6,17 @@
 </head>
 <body>
 <script>
-    let string="abcdfafc";
-    let strings= string.split("")
-    for (let i=0;i<strings.length;i++){
-        for (let j=1;j<strings.length;j++){
-            if (strings[i]===strings[j]){
-                strings.splice(j,1)
+    let string = "abbcdfafc";
+    let strings = string.split("");
+    for (let i = 0; i < strings.length; i++) {
+        for (let j = i + 1; j < strings.length; j++) {
+            if (strings[i] === strings[j]) {
+                strings.splice(j, 1);
+                j--;
             }
         }
-    }alert(strings);
+    }
+    alert(strings);
 </script>
 </body>
 </html>

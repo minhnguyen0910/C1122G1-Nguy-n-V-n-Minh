@@ -6,19 +6,20 @@
 </head>
 <body>
 <script>
-    let arrayA = [1, 2, 3, "f", "j", "g"];
-    let arrayB = [1, 3, "j", "k", "i", 9];
+    let arrayA = [1, 2, 3];
+    let arrayB = [1, 3, 9, 5, 3];
     let arrayC = [];
-    for (let i = 0; i < arrayA.length; i++) {
+    for (let i = 0; i < arrayB.length; i++) {
+        let flag=true;
         for (let j = 0; j < arrayB.length; j++) {
-            if (arrayA[i] === arrayB[j]) {
-                arrayA.splice(i, 1);
-                arrayB.splice(j, 1);
+            if (arrayB[i] === arrayA[j]) {
+                flag=false;
                 break;
             }
+        }if (flag){
+            arrayC.push(arrayB[i]);
         }
     }
-    arrayC = arrayA.concat(arrayB);
     alert(arrayC);
 </script>
 </body>

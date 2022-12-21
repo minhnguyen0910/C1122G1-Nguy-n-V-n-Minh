@@ -6,16 +6,29 @@
 </head>
 <body>
 <script>
-    let array = [[1, 2, 3, 4, 6, 8], [2, 6, 4, 5, 7], [10, 8, 9, 12, 4]];
-    let sum = 0;
-    for (let i = 0; i < array.length; i++) {
-        for (let j = 0; j < array[i].length; j++) {
-            if (array[i][j] % 2 == 0) {
-                sum += array[i][j];
+    function sum(array) {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (array[i][j] % 2 == 0) {
+                    sum += array[i][j];
+                }
             }
         }
+        return sum;
     }
-    alert(sum);
+
+    let num = +prompt("số phần tử mảng lớn");
+    let arrays = new Array(num);
+    for (let i = 0; i < num; i++) {
+        let n = +prompt("nhập phần tử mảng con");
+        let array = new Array(n)
+        for (let j = 0; j < n; j++) {
+            array[j] = +prompt("nhập");
+        }
+        arrays[i] = array;
+    }
+    document.write(sum(arrays));
 </script>
 </body>
 </html>

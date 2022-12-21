@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Số lượng</th>
+        <th>Tên SP</th>
+        <th>Đơn giá</th>
+    </tr>
+    <tr>
+        <th id="slChuoi">0</th>
+        <th>
+            <buton onclick="banana()">Chuối</buton>
+        </th>
+        <th>10000</th>
+    </tr>
+    <tr>
+        <th id="slCam">0</th>
+        <th>
+            <buton onclick="orange()">Táo</buton>
+        </th>
+        <th>5000</th>
+    </tr>
+    <tr>
+        <th id="slTao">0</th>
+        <th>
+            <buton onclick="apple()">Apple</buton>
+        </th>
+        <th>7000</th>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="tong()">Total</button>
+        </td>
+        <td id="tong">:000000</td>
+    </tr>
+</table>
+<script>
+    let x = 0;
+    let y = 0;
+    let z = 0;
+    let total;
+
+    function banana() {
+        x++;
+        document.getElementById("slChuoi").innerHTML = x;
+    }
+
+    function orange() {
+        y++;
+        document.getElementById("slCam").innerText = y;
+    }
+
+    function apple() {
+        z++;
+        document.getElementById("slTao").innerText = z;
+    }
+
+    function tong() {
+        total = x * 10000 + y * 5000 + z * 7000;
+        document.getElementById("tong").innerHTML = total;
+    }
+
+</script>
+</body>
+</html>

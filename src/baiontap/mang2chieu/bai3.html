@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findMax(arrays) {
+        let max = arrays[0][0];
+        for (let i = 0; i < arrays.length; i++) {
+            for (let j = 0; j < arrays[i].length; j++) {
+                if (arrays[i][j] > max) {
+                    max = arrays[i][j];
+                }
+            }
+        }
+        return max;
+    }
+
+    function findMin(arrays) {
+        let min = arrays[0][0];
+        for (let i = 0; i < arrays.length; i++) {
+            for (let j = 0; j < arrays[i].length; j++) {
+                if (arrays[i][j] < min) {
+                    min = arrays[i][j];
+                }
+            }
+        }
+        return min;
+    }
+
+    let array = [[2, 3, 4, 5, 7, 1], [10, 11, 2, 7, 8]];
+    document.write("Max : " + findMax(array) + "<br>");
+    document.write("Min : " + findMin(array));
+</script>
+</body>
+</html>

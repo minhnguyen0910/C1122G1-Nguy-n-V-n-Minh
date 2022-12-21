@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function find(num) {
+        if (num == 2 && num == 3) {
+            return num;
+        } else {
+            let flag = true;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    flag = false;
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    let array = [];
+    let arrays = [[2, 3, 4, 5, 7, 1], [10, 11, 2, 7, 8]];
+    for (let i = 0; i < arrays.length; i++) {
+        for (let j = 0; j < arrays[i].length; j++) {
+            if (find(arrays[i][j]) === true) {
+                array.push(arrays[i][j]);
+            }
+        }
+    }
+    document.write(array + "<br>");
+    document.write("có " + array.length + " " + "số");
+
+</script>
+</body>
+</html>

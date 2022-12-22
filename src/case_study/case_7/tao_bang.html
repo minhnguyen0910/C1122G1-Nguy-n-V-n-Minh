@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" style="width: 100%">
+    <tr>
+        <th colspan="2">Hệ Thống Quản Lí Bài Tập</th>
+    </tr>
+    <tr>
+        <th style="width: 20%"><select name="" id="case1" onchange="cases1()">
+            <option value="case1bai1">Bài 1</option>
+            <option value="case1bai2">Bài 2</option>
+            <option value="case1bai3">Bài 3</option>
+            <option value="case1bai4">Bài 4</option>
+        </select></th>
+        <th rowspan="5" id="display" style="width: 80%"></th>
+    </tr>
+    <tr>
+        <th>
+            <select name="" id="case2" onchange="cases2()">
+                <option value="case2bai1">Bài 1</option>
+                <option value="case2bai2">Bài 2</option>
+            </select>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <select name="" id="case3" onchange="cases3()">
+                <option value="case3bai1">Bài 1</option>
+                <option value="case3bai2">Bài 2</option>
+                <option value="case3bai3">Bài 3</option>
+                <option value="case3bai4">Bài 4</option>
+                <option value="case3bai5">Bài 5</option>
+            </select>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <select name="" id="case4" onchange="cases4()">
+                <option value="case4bai1">Bài 1</option>
+                <option value="case4bai2">Bài 2</option>
+                <option value="case4bai3">Bài 3</option>
+            </select>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <select name="" id="case5" onchange="cases5()">
+                <option value="case5bai1">Bài 1</option>
+                <option value="case5bai2">Bài 2</option>
+                <option value="case5bai3">Bài 3</option>
+            </select>
+        </th>
+    </tr>
+</table>
+<script>
+    function cases1() {
+        let y = document.getElementById("case1").value;
+        if (y === "case1bai1") {
+            document.getElementById("display").innerHTML = "Bài 1: Vẽ hình chữ nhật rỗng chiều dài n và chiều rộng m theo hình dưới đây. <br>" +
+                "Ví dụ: x = 4, y = 5<br>" +
+                "* * * * *<br>" +
+                "* +        *<br>" +
+                "*          *<br>" +
+                "* * * * *<br>";
+        } else if (y === "case1bai2") {
+            document.getElementById("display").innerHTML = "Bài 2: Vẽ tam giác vuông cân rỗng có chiều cao h. Ví dụ: h = 5<br>" +
+                "*<br>" +
+                "* *<br>" +
+                "*   *<br>" +
+                "*       *<br>" +
+                "* * * * *<br>";
+        } else if (y === "case1bai3") {
+            document.getElementById("display").innerHTML = "Bài 3: Vẽ tam giác cân đặc có chiều cao h. Ví dụ: h = 5<br>" +
+                "        <br>" +
+                "           *<br>" +
+                "        * * *<br>" +
+                "     * * * * *<br>" +
+                "  * * * * * * *<br>" +
+                "* * * * * * * * *<br>"
+        } else if (y === "case1bai4") {
+            document.getElementById("display").innerHTML = "Bài 2: Vẽ tam giác vuông cân rỗng có chiều cao h. Ví dụ: h = 5<br>" +
+                "*<br>" +
+                "* *<br>" +
+                "*    *<br>" +
+                "*       *<br>" +
+                "* * * * *<br>"
+        }
+    }
+
+    function cases2() {
+        let y = document.getElementById("case2").value;
+        if (y === "case2bai1") {
+            document.getElementById("display").innerHTML = "Bài 1: Viết một chương trình để nhập lương nhân viên," +
+                " tính thuế thu nhập và lương ròng (số tiền lương thực sự mà nhân viên đó nhận được). " +
+                "Với các thông số giả sử như sau (không theo luật lương, chỉ là con số giả sử để dễ tính toán):<br>" +
+                "20% thuế thu nhập nếu lương là 15 triệu.<br>" +
+                "10% thuế thu nhập nếu lương từ 7 đến 15 triệu." +
+                "5% thuế thu nhập nếu lương dưới 7 triệu<br>";
+        } else if (y === "case2bai2") {
+            document.getElementById("display").innerHTML = "Bài 2: Viết chương trình kiểm tra một ký tự trong bảng chữ cái tiếng anh" +
+                " là nguyên âm hay phụ âm. Ký tự là bất kỳ được nhập từ bàn phím. Các ký tự" +
+                " nguyên âm bao gồm: 'o', 'u', 'i', 'a', 'e' hoặc 'O', 'U', 'I', 'A', 'E'";
+        }
+    }
+
+    function cases3() {
+        let y = document.getElementById("case3").value;
+        if (y === "case3bai1") {
+            document.getElementById("display").innerHTML = "Bài 1: Cho mảng a chỉ chứa các số nguyên<br>" +
+                "Xây dựng mảng b là prefix sums của mảng a cụ thể theo công thức:<br>" +
+                "  b[0]   = a[0]<br>" +
+                "  b[1]   = a[0] + a[1]<br>" +
+                "  b[2]   = a[0] + a[1] + a[2]<br>" +
+                "  ...<br>" +
+                "  b[n - 1] = a[0] + a[1] + ... + a[n - 1]<br>";
+        } else if (y === "case3bai2") {
+            document.getElementById("display").innerHTML = "Bài 2: Cho 2 mảng A và B chứa số nguyên. Tìm ra một mảng" +
+                " đã được sắp xếp chứa các phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A<br>" +
+                "Chú ý các phần tử giống nhau chỉ tính là 1 lần xuất hiện<br>" +
+                "Ví dụ:  A=[7,2,5,3,5,3] và B=[7,2,5,4,6,3,5,3] thì kết quả missingValue(A, B) = [4, 6]<br>";
+        } else if (y === "case3bai3") {
+            document.getElementById("display").innerHTML = "Bài 3: Cho một danh sách các phân số, hãy tìm chỉ số của phân số lớn nhất (đếm từ 0)<br>" +
+                "Giả định rằng không có các phân số bằng nhau trong tập đầu vào<br>" +
+                "Ví dụ: numerators = [5, 2, 5] và denominators = [6, 3, 4], thì kết quả maxFraction(numerators, denominators) = 2. <br>" +
+                "⇨\t5/4 là phân số lớn nhất, có chỉ số là 2.<br>";
+        } else if (y === "case3bai4") {
+            document.getElementById("display").innerHTML = "Bài 4: Viết một chương trình nhập một số từ bàn phím " +
+                "và in ra màn hình bằng chữ. Ví dụ 1234, kết quả in ra màn hình là một hai ba bốn.";
+        } else if (y === "case3bai5") {
+            document.getElementById("display").innerText = "Bài 5: Giả sử menu của chúng ta có các loại thức uống như sau:<br>" +
+                "Cafe<br>" +
+                "Cam vắt<br>" +
+                "Nước ép cà rốt<br>" +
+                "Nước ép cà chua<br>" +
+                "Nước lọc<br>" +
+                "Nước dừa<br>" +
+                "Viết một chương trình gọi thức uống đơn giản<br>";
+        }
+
+    }
+
+    function cases4() {
+        let y = document.getElementById("case4").value;
+        if (y === "case4bai1") {
+            document.getElementById("display").innerHTML = "Bài 1: Viết một hàm chuẩn hóa xâu ký tự: biến" +
+                " đổi xâu ký tự thành xâu sao cho trong xâu không có 2 dấu cách liền nhau và bắt" +
+                " đầu mỗi từ phải in hoa. Ví dụ tRuong    TaN   HAI => Truong Tan Hai.\n" +
+                "Và một hàm tìm từ dài nhất trong 1 xâu ký tự. Hàm main sử dụng các hàm này " +
+                "để nhập xâu ký tự từ bàn phím, in ra xâu trước và sau khi chuẩn hóa, 1 từ dài nhất trong xâu đó.\n";
+        } else if (y === "case4bai2") {
+            document.getElementById("display").innerHTML = "Bài 2: Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó\n" +
+                "Ví dụ: s = \"cabca\", thì kết quả differentSymbolsNaive(s) = 3.\n" +
+                "⇨\tCó 3 kí tự khác nhau là a, b và c.\n";
+        } else if (y === "case4bai3") {
+            document.getElementById("display").innerHTML = "Bài 3: Cho hai xâu kí tự, tìm số lượng kí tự chung giữa chúng.\n" +
+                "Ví dụ: s1 = \"aabcc\" và s2 = \"adcaa\", thì kết quả commonCharacterCount(s1, s2) = 3.\n" +
+                "⇨\t2 xâu s1 và s2 có 3 kí tự chung: 2 kí tự 'a' và 1 kí tự 'c'.\n";
+        }
+
+    }
+
+    function cases5() {
+        let y = document.getElementById("case5").value;
+        if (y === "case5bai1") {
+            document.getElementById("display").innerHTML = "Bài 1: Viết hàm tính tổng các số chẵn trong" +
+                " ma trận có kích thước m*n. Với m, n là các số nhập từ bàn phím.";
+        } else if (y === "case5bai2") {
+            document.getElementById("display").innerHTML = "Bài 2: Viết hàm liệt kê các số nguyên " +
+                "tố trong mảng 2 chiều, đếm các số nguyên tố có trong mảng đó.";
+        } else if (y === "case5bai3") {
+            document.getElementById("display").innerHTML = "Bài 3: Viết hàm tìm giá trị lớn nhất, nhỏ nhất trong mảng 2 chiều";
+        }
+
+    }
+</script>
+</body>
+</html>

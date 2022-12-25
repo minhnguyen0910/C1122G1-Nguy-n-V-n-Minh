@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string1 = prompt("nhập chuỗi 1");
+    let string2 = prompt("nhập chuỗi 2");
+    let array1 = string1.split("");
+    let array2 = string2.split("");
+    let count = 0;
+    let flag = false;
+    if (array1.length === array2.length) {
+        for (let i = 0; i < array1.length; i++) {
+            for (let j = 0; j < array2.length; j++) {
+                if (array1[i] === array2[j].toUpperCase()||array1[i]) {
+                    flag=false;
+                    break;
+                }else if (array1[i]===array2[j]){
+                    count++
+                }
+            }
+        }
+        if (count === array1.length) {
+            flag = true;
+            alert(flag);
+        } else {
+            alert(flag);
+        }
+    }
+</script>
+</body>
+</html>

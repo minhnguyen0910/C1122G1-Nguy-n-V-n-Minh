@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [1, 345, 234, 435, 56789];
+    let arrays = [];
+    for (let i = 0; i < array.length; i++) {
+        let arr = array[i].toString();
+        if (arr[0] % 2 !== 0) {
+            arrays.push(array[i]);
+        }
+    }
+    alert(arrays);
+</script>
+</body>
+</html>

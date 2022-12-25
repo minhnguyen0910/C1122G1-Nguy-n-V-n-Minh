@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string1 = "aabcc";
+    let string2 = "abca";
+    let array1 = string1.split("");
+    let array2 = string2.split("");
+    let array3 = [];
+    for (let i = 0; i < array1.length; i++) {
+        for (let j = 0; j < array2.length; j++) {
+            if (array1[i] === array2[j]) {
+                array3.push(array1[i]);
+                array1.splice(i, 1);
+                array2.splice(j, 1);
+            }
+        }
+    }
+    document.write("có " + array3.length + " phần tử chung " + "(" + array3 + ")" + "<br>");
+    for (let i = 0; i < array3.length; i++) {
+        let count = 1;
+        for (let j = i + 1; j < array3.length; j++) {
+            if (array3[i] === array3[j]) {
+                count++;
+                array3.splice(j, 1);
+            }
+        }
+        document.write("có " + count + " " + array3[i] + "<br>");
+    }
+</script>
+</body>
+</html>

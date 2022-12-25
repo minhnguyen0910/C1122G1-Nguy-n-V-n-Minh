@@ -6,23 +6,24 @@
 </head>
 <body>
 <script>
-    let mang=[];
-    let n=prompt("nhập độ dài của mảng");
-    let mang1=[];
-    let count=0;
-    for (i=0;i<n;i++){
-        mang[i]=prompt("nhập giá trị của mảng");
-    }
-    for (let i=0;i<mang.length;i++){
-        count=0;
-        for (let j=i+1;j<mang.length;j++){
-            if (mang[i]===mang[j]){
+    let string = prompt("nhập");
+    let mang = string.split("");
+    let mang1 = [];
+    let count = 0;
+    for (let i = 0; i < mang.length; i++) {
+        count = 0;
+        for (let j = i + 1; j < mang.length; j++) {
+            if (mang[i] === mang[j]) {
+                mang.splice(j, 1);
+                j--;
                 count++
             }
-        }if (count>0){
+        }
+        if (count > 0) {
             mang1.push(mang[i]);
         }
-    }document.write(mang1);
+    }
+    document.write(mang1);
 
 </script>
 </body>

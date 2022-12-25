@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string="Hello CodeGym";
+    let array=string.split("");
+     let x="";
+    for (let i=0;i<array.length;i++){
+        if (array[i]==array[i].toUpperCase()){
+            array.splice(i,0,x);
+        }
+    }alert(array);
+</script>
+</body>
+</html>

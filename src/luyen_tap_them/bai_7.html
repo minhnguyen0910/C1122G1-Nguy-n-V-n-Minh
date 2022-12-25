@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("độ dài mảng cha");
+    let m = prompt("độ dài mảng con");
+    let arrays = new Array(n);
+    for (let i = 0; i < n; i++) {
+        let array = new Array(m);
+        for (let j = 0; j < m; j++) {
+            array[j] = +prompt("nhập giá trị mảng" + i)
+        }
+        arrays[i] = array;
+    }
+
+    function check(number) {
+        if (number == 2 || number == 3) {
+            return true;
+        } else {
+            for (let i = 2; i < Math.sqrt(number); i++) {
+                let flag = true;
+                if (number % i == 0 || number == 0 || number == 1) {
+                    flag = false
+                    return flag;
+                }
+            }
+            return false;
+        }
+    }
+        function listed(arr) {
+            let array = [];
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr.length; j++) {
+                    if (check(arr[i][j])) {
+                        array.push(arr[i][j]);
+                    }
+                }
+            }return array;
+
+        }
+        alert(listed(arrays));
+</script>
+</body>
+</html>

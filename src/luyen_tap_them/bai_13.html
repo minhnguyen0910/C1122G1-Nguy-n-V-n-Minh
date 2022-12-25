@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(array) {
+        let flag = true;
+        for (let i = 0; i < array.length; i++) {
+            if (array[0] !== array[i]) {
+                flag = false;
+                return flag;
+            }
+        }
+        return flag;
+    }
+
+    let arrays = [1, 2, 4, 6, 9, 10];
+    if (check(arrays) === true) {
+        alert("-1");
+    } else {
+        let max = arrays[0];
+        for (let i = 0; i < arrays.length; i++) {
+            if (arrays[i] > max) {
+                max = arrays[i];
+            }
+        }
+        let max1 = arrays[0];
+        let x;
+        for (let j = 0; j < arrays.length; j++) {
+            if (arrays[j] !== max) {
+                if (arrays[j] > max1) {
+                    max1 = arrays[j];
+                    x = j;
+                }
+            }
+        }
+        document.write("giá trị lớn thứ 2 là " + max1 + "<br>");
+        document.write("index :" + x);
+    }
+
+</script>
+</body>
+</html>

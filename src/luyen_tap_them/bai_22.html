@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = +prompt("nhập số");
+
+    function check(n) {
+        if (n == 1 || n == 0) {
+            return false;
+        } else if (n == 2 || n == 3) {
+            return true;
+        } else {
+            let flag = true;
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    flag = false;
+                    return flag;
+                }
+            }
+            return flag;
+        }
+    }
+
+
+    let arr = [];
+    for (let i = 0; i <= num; i++) {
+        if (check(i) === true) {
+            arr.push(i);
+        }
+    }
+    let flag = false;
+    let x;
+    for (let i = 0; i <= arr.length / 2; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if ((num - arr[i]) == arr[j]) {
+                flag = true;
+                document.write(num + "=" + arr[i] + "+" + arr[j] + "<br>");
+            }
+        }
+
+    }if (flag==false){
+        alert("-1");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [13.5, 4456.23423423, 723424.12, 234234.1, 534234.432];
+    let arr = [];
+    let x = 15.5;
+    let z = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > x) {
+            z = array[i] - x;
+        } else {
+            z = x - array[i];
+        }
+        arr.push(z);
+    }
+    let max = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    alert(max + x);
+</script>
+</body>
+</html>

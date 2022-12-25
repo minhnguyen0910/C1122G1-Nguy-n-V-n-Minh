@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [1, 2, 2, 3, 4];
+    let flag = false;
+    for (let i = 1; i < array.length - 1; i++) {
+        let sum1 = 0;
+        let sum2 = 0;
+        for (let j = 0; j < i; j++) {
+            sum1 += array[j];
+        }
+        for (let z = i + 1; z < array.length; z++) {
+            sum2 += array[z];
+        }
+        if (sum1 == sum2) {
+            flag = true;
+            alert(flag);
+            break;
+        }
+    }
+    if (flag == false) {
+        alert(flag);
+    }
+</script>
+</body>
+</html>

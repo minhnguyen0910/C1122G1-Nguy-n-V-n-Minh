@@ -7,17 +7,19 @@
 <body>
 <script>
     function find(num) {
-        if (num == 2 && num == 3) {
-            return num;
+        if (num == 1) {
+            return false;
+        } else if (num == 2 || num == 3) {
+            return true;
         } else {
             let flag = true;
             for (let i = 2; i <= Math.sqrt(num); i++) {
                 if (num % i == 0) {
                     flag = false;
-                    return false;
+                    return flag;
                 }
             }
-            return true;
+            return flag;
         }
     }
 

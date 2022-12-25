@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = +prompt("nhập số tính giai thừa");
+    let s = 1;
+    for (let i = 1; i <= number; i++) {
+        s *= i;
+    }
+    let str = s.toString()
+    for (let i = str.length - 1; i >= 0; i--) {
+        if (str[i] != 0) {
+            alert(str[i]);
+            break;
+        }
+    }
+</script>
+</body>
+</html>

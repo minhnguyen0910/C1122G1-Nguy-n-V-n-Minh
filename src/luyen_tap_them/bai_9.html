@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(number) {
+        let x = number.toString().split("");
+        if (x[0] === x[x.length - 1]) {
+            return true;
+        }
+        return false;
+    }
+
+    let l = prompt("nhập số ");
+    let r = prompt("nhập số");
+    let array = [];
+    for (let i = l; i <= r; i++) {
+        array.push(i);
+    }
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (check(array[i])) {
+            count++;
+        }
+    }
+    alert(count);
+   
+</script>
+</body>
+</html>
